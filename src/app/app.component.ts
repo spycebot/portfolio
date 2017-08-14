@@ -87,16 +87,46 @@ export class AppComponent {
 	portfolioDetail(element) {
 		console.log("AppComponent:portfolioDetail:typeof element.alt: " +typeof element);
 		let ekeys = Object.keys(element);
-		console.log("AppComponent:portfolioDetail:ekeys.length " + ekeys.length);
+		/* console.log("AppComponent:portfolioDetail:ekeys.length " + ekeys.length);
 		for (let k of ekeys) {
 			console.log("## " + k + ": " + element.k + " ##");
-		}
-		// document.getElementById("img01").src = element.src;
+		} */
+		// NG document.getElementById("img01").src = element.src;
 		let image = document.getElementById("img01"); //.src = element.src;
 		let ikeys = Object.keys(image);
+		let ct: string;
+		let sr: string;
+		//let ie: HTMLImageElement = document.createElement('img');
+
+
+		switch (element) {
+			case 0:
+				ct = "AthenianTrader";
+				sr = "/assets/AthenianTraderScreenshot_12Aug2017.jpg";
+			break;
+			case 1:
+				ct = "SpaceTrader";
+				sr = "/assets/SpaceTraderScreenshot13Aug2017.jpg";
+			break;
+			case 2:
+				ct = "Raycasting";
+				sr = "/assets/RaycastingScreenshot13Aug2017.jpg";
+			break;
+			case 3:
+				ct = "Concrete5";
+				sr = "/assets/ShannonWareDotComConcrete5_13Aug2017.jpg";
+			break;
+			default: 
+				ct = "Shannon Ware";
+				sr = "/assets/IonadBhotaiochtaP1080932.jpg";
+			break;
+		}
+		(<HTMLImageElement>document.querySelector("#img01")).src =sr;
 		// OK console.log("AppComponent:portfolioDetail:ikeys.length " + ikeys.length);
 		document.getElementById("modal01").style.display = "block";
-		//let captionText = document.getElementById("caption");
+		// HERE document.getElementById("img01").src = sr;
+		let captionText = document.getElementById("caption");
 		//captionText.innerHTML = element.alt;
+		captionText.innerHTML = ct;
 	}
 }

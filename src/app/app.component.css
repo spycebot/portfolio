@@ -42,4 +42,7 @@ body, html {
     }
 }
 
-.blueLine { border: 1px solid #e6ffff; }
+.blueLine { border: 1px solid #e0ebeb; }
+
+.visit { display: block; width : 100%; border: 1px solid #e0ebeb; text-decoration: none;}
+.visit:hover { background-color: #e6ffff ; text-decoration: underline}
