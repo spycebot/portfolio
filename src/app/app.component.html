@@ -7,11 +7,11 @@
     <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
     <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
     <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-      <i class="fa fa-search"></i>
+    <a (click)="toggleCogs()" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      <i class="fa fa-cogs"></i>
     </a>
-    <!-- span class="w3-bar-item">Window: {{windowWidth}}, {{windowHeight}}, Image: {{
-    imageHeight}}</span -->
+    <span *ngIf="showCogs" class="w3-bar-item">Window: {{windowWidth}}, {{windowHeight}}, Image: {{
+    imageHeight}}</span>
   </div>
 
   <!-- Navbar on small screens -->
@@ -72,7 +72,7 @@
   </div>
   <div class="w3-quarter w3-section">
     <span class="w3-xlarge">600+</span><br>
-    Projects Done*
+    Contracts Completed
   </div>
   <div class="w3-quarter w3-section">
     <span class="w3-xlarge">30+</span><br>
@@ -96,25 +96,25 @@
   <h3 class="w3-center">DIGITAL WORKS</h3>
   <p class="w3-center"><em>Support your local laboratory</em></p><br>
 
-  <p>*Including all translation, web development, research and maintenance contracts.</p>
+  <!-- p>*Including all translation, web development, research and maintenance contracts.</p -->
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w3-center">
-    <div class="w3-col m3">
+    <div class="w3-col m3 port-col">
       <img src="/assets/AthenianTraderScreenshot_12Aug2017.jpg" style="width:100%" (click)="portfolioDetail(0)" class="w3-hover-opacity blueLine" alt="AthenianTrader">
       <a href="https://www.shannonware.com/AthenianTrader/" class="visit" target="_blank">Visit ></a>
     </div>
 
-    <div class="w3-col m3">
+    <div class="w3-col m3 port-col">
       <img src="/assets/SpaceTraderScreenshot13Aug2017.jpg" style="width:100%" (click)="portfolioDetail(1)" class="w3-hover-opacity blueLine" alt="SpaceTrader">
       <a href="https://www.shannonware.com/SpaceTrader/" class="visit" target="_blank">Visit ></a>
     </div>
 
-    <div class="w3-col m3">
+    <div class="w3-col m3 port-col">
       <img src="/assets/RaycastingScreenshot13Aug2017.jpg" style="width:100%" (click)="portfolioDetail(2)" class="w3-hover-opacity blueLine" alt="Raycasting">
       <a href="https://www.shannonware.com/WebGL/Raycasting/" class="visit" target="_blank">Visit ></a>
     </div>
 
-    <div class="w3-col m3">
+    <div class="w3-col m3 port-col">
       <img src="/assets/ShannonWareDotComConcrete5_13Aug2017.jpg" style="width:100%" (click)="portfolioDetail(3)" class="w3-hover-opacity blueLine" alt="Concrete5">
     </div>
   </div>

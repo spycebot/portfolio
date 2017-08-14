@@ -11,6 +11,8 @@ export class AppComponent {
 	windowHeight: number;
 	imageHeight: number;
 	//document.body.style.height = "400px";
+	showCogs: boolean = false;
+	date: Date = new Date();
 
 	@HostListener('window:scroll', ['$event']) onScrollEvent($event){
 		let date = Date();
@@ -128,5 +130,11 @@ export class AppComponent {
 		let captionText = document.getElementById("caption");
 		//captionText.innerHTML = element.alt;
 		captionText.innerHTML = ct;
+	}
+
+	toggleCogs() {
+		this.showCogs = !this.showCogs;
+		console.log("AppComponent:toggleCogs:this.date: " + this.date);
+		console.log("AppComponent:toggleCogs:this.showCogs: " + this.showCogs);
 	}
 }
